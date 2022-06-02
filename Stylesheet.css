@@ -1,0 +1,51 @@
+p{
+    font-family: 'Michroma', sans-serif;
+    text-align: center;
+    color: chartreuse;
+    font-size: 30px;
+}
+h1{
+    text-align: center;
+    color: chartreuse;
+}
+body{
+    background-color: black;
+}
+.buttondiv{
+    text-align: center
+}
+.basicbutton {
+    background-color: black;
+    color: chartreuse;
+    border: 2px solid chartreuse; 
+
+  }
+.basicbutton:hover {
+    border: 2px solid whitesmoke;
+}
+.weekdays li{
+    color: chartreuse;
+    margin: 0;
+    padding: 10px 0;
+    display: inline-block;
+    text-align: center;
+    width: 13.6%;
+}
+.displaydate {
+    color: chartreuse;
+}
+span {
+    font-family: 'Michroma', sans-serif;
+    text-align: center;
+    color: chartreuse;
+    font-size: 30px;
+}
+.daynumbers li{
+    color: chartreuse;
+    margin: 0;
+    padding: 10px 0;
+    display: inline-block;
+    text-align: center;
+    width: 13.6%;
+}
+
