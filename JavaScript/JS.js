@@ -11,18 +11,36 @@ let currentdate = new Date();
 let selectedYear = currentdate.getFullYear();
 let selectedMonth = currentdate.getMonth()+1;
 
+let monthImages = ["Images/January.PNG","Images/February.PNG","Images/March.PNG","Images/April.PNG","Images/May.PNG","Images/June.PNG","Images/July.PNG","Images/August.PNG","Images/September.PNG","Images/October.PNG","Images/November.PNG","Images/December.PNG"]
+const monthImage = document.querySelector(".imagebox")
+
 function nextMonth(){
     selectedMonth++;
+    if (selectedMonth == 13){
+        selectedYear++;
+        selectedMonth = 1;
+        getDayOfFirstOfMonth();
+    }
+    monthImage.src = monthImages[selectedMonth-1];
+
 
 }
+
 function previousMonth(){
     selectedMonth--;
+    if(selectedMonth == 0){
+        selectedYear--;
+        selectedMonth = 12;
+        getDayOfFirstOfMonth();
+    }
+    monthImage.src = monthImages[selectedMonth-1];
 }
 
 function getDayOfFirstOfMonth(){
 let day = new Date(selectedYear + "-" + selectedMonth + "-01").getDay();
 let tempa = document.querySelector(".test");
 day = (day===0) ? 7 : day;
+monthImage.src = monthImages[selectedMonth-1];
 
 
 daySlots = ["","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""]; //Array Length 39.
@@ -32,8 +50,9 @@ j = i - day + 2;
 daySlots[i] = j;
 }
 Months = ["Thrembo","Jan", "feb", "March", "April", "May", "June", "July", "August", "September", "October", "November", "december"];
-tempa.innerText = Months[selectedMonth];
-DaysInMonth = [0,31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]; //Need to make exception for leap years?
+tempa.innerText = selectedYear;
+DaysInMonth = [0,31,28,31,30,31,30,31,31,30,31,30,31,0]; //Need to make exception for leap years?
+//Using 0 for element 0 - Not optimal should find alternative solution. 
 
 //Agony.
 for(let x = DaysInMonth[selectedMonth]+ day -1; x < daySlots.length; x++){

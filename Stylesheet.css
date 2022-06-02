@@ -48,4 +48,25 @@ span {
     text-align: center;
     width: 13.6%;
 }
-
+.imagebox{
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.Container {
+    position: relative;
+}
+.NextButton{
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    
+    
+}
+.PreviousButton {
+    position: absolute;
+    top: 50%;
+    right: 80%;
+}

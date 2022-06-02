@@ -8,31 +8,17 @@
     <link rel="stylesheet" href="Stylesheet.css">
 </head>
 <body onload="loadDate(),getDayOfFirstOfMonth()">
-   <h1>
-       <pre>
-                                                  
-  ▀████▀                              
-     ██                                
-     ██ ▀███  ▀███ ▀████████▄   ▄▄█▀██ 
-     ██   ██    ██   ██    ██  ▄█▀   ██
-     ██   ██    ██   ██    ██  ██▀▀▀▀▀▀
-███  ██   ██    ██   ██    ██  ██▄    ▄
- █████    ▀████▀███▄████  ████▄ ▀█████▀
-                                     
-                                     
-
-
-  
-        </pre>
-   </h1>
-    <button class="" onclick="nextMonth(),getDayOfFirstOfMonth()">Next</button>
-    <button class="" onclick="previousMonth(),getDayOfFirstOfMonth()">Previous</button>
+    <div class="Container">
+        <button class="NextButton" onclick="nextMonth(),getDayOfFirstOfMonth()">Next</button>
+        <img src="Images/June.PNG" class="imagebox" alt="centered image" width="850" height="300">
+        <button class="PreviousButton" onclick="previousMonth(),getDayOfFirstOfMonth()">Previous</button>
+    </div>
    <div>
-       <p>Current Date: <span class="displaydate"></span></p>
+       <p class="test">...</p>
+       
    </div>
    <div>
-    <p class="test">...</p>
-    
+    <p>Current Date: <span class="displaydate"></span></p>
    </div>
    <div>
        <ul class="weekdays">
